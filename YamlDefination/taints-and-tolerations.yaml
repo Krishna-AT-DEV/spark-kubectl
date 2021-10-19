@@ -1,0 +1,16 @@
+# kubectl taint nodes node01 spray=mortein:NoSchedule
+# kubectl describe node controlplane
+# kubectl taint nodes controlplane node-role.kubernetes.io/master:NoSchedule- > To remove the taint from a node
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bee
+spec:
+  containers:
+  - image: nginx
+    name: bee
+  tolerations:
+  - key: spray
+    value: mortein
+    effect: NoSchedule
+    operator: Equal
