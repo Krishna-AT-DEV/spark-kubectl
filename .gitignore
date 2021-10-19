@@ -127,3 +127,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# secrets
+secrets/key-file
+secrets/key-file-k8s-secret.yaml
+key-file
+key-file-k8s-secret.yaml
+secret-utils/
+
+# IDE
+.idea/
